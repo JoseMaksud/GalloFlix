@@ -1,18 +1,16 @@
 namespace GalloFlix.Interfaces;
 
-public interface IRepository<T> where T: class
+public interface IRepository<T> where T : class
 {
-    // CRUD: CREATE, READ, UPDATE, DELETE
-    // CREATE - Adicionar Dado
-    void Create(T model);
+    // CRUD: CREATE, READ, UPADTE, DELETE 
+    // 4 Operações básicas de todo banco de dados
+    void Create(T model); // Add 
 
-    // READ - Leitura de Dados
-    List<T> ReadAll();
-    T ReadById(int? id);
+    List<T> ReadAll(); // Get 
 
-    // UPDATE - Atulizar um Dado
-    void Update(T model);
+    T ReadById(int? id); // Get(id)
 
-    // DELETE - Excluir Dado
+    void Update(T model); //Edit
+
     void Delete(int? id);
 }
